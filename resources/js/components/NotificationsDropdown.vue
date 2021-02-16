@@ -56,7 +56,9 @@
         mounted() {
             const self = this
 
+    console.log('here');
             self.loadNotifications(function (response) {
+                console.log(Nova.config.user_model_namespace + '.' + response.data.user_id)
                 Echo.private(Nova.config.user_model_namespace + '.' + response.data.user_id)
                     .notification(self.notificationReceived)
             })
