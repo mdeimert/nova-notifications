@@ -84,7 +84,7 @@
             },
             notificationReceived: function (notification) {
                 const self = this
-
+                console.log('eee')
                 self.loadNotifications()
 
                 let level = 'info'
